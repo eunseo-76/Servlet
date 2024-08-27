@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <!-- 프로젝트 내에서 404 또는 500 error가 발생하면 /showErrorPage 요청하도록 설정 -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+</web-app>
