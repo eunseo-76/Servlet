@@ -3,7 +3,7 @@ plugins {
     id 'war'
 }
 
-group 'com.kenny'
+group 'com.ohgiraffers'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -22,11 +22,6 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto
-    implementation 'org.springframework.security:spring-security-crypto:5.7.5'
-
-    // https://mvnrepository.com/artifact/commons-logging/commons-logging
-    implementation 'commons-logging:commons-logging:1.2'
 
     compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
 
@@ -35,5 +30,4 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
-}
+    useJUnitPlatform()}

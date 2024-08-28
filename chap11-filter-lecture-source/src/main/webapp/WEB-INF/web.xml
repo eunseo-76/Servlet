@@ -3,4 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+    <!-- 필터 등록 -->
+    <filter>
+        <filter-name>encoding</filter-name> <!-- 이 이름은 여기서 짓고 매핑 시 사용-->
+        <filter-class>com.kenny.chap11.section02.uses.EncodingFilter</filter-class>
+        <init-param>    <!-- 초기화 시 사용되어야 하는 내용 -->
+            <param-name>encoding-type</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <!-- 필터 매핑-->
+    <filter-mapping>
+        <filter-name>encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- xml 파일에 필터 작성하는 순서대로 필터가 등록된다. -->
 </web-app>
